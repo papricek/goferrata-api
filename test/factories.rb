@@ -14,4 +14,5 @@ FactoryGirl.define do
     slug "via_ferrata_balma_negra"
     difficulty "F"
   end
+
 end
