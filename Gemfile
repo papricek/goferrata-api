@@ -8,6 +8,11 @@ group :development, :test do
   gem "web-console", "~> 2.0"
   gem "spring"
   gem "quiet_assets"
+
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rbenv', require: false
+  gem 'capistrano-passenger', require: false
 end
 
 group :test do
