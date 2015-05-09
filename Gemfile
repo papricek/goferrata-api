@@ -9,10 +9,10 @@ group :development, :test do
   gem "spring"
   gem "quiet_assets"
 
-  gem 'capistrano-rails'
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano-rbenv', require: false
-  gem 'capistrano-passenger', require: false
+  gem "capistrano-rails"
+  gem "capistrano-bundler", require: false
+  gem "capistrano-rbenv", require: false
+  gem "capistrano-passenger", require: false
 end
 
 group :test do
