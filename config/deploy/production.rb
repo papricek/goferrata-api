@@ -3,7 +3,7 @@ set :rails_env, "production"
 set :branch, 'master'
 
 set :user, "#{fetch(:application)}"
-set :domain, "api.eballance.cz"
+set :domain, "#{fetch(:application)}.eballance.cz"
 set :deploy_to, "/home/#{fetch(:user)}/web"
 
 server fetch(:machine), user: fetch(:user), roles: %w{web app db}
