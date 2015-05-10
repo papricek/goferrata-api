@@ -4,6 +4,7 @@ gem "rails", "4.2.1"
 gem "sqlite3"
 gem "jbuilder", "~> 2.0"
 gem "rack-cors"
+gem "rails_admin"
 
 group :development, :test do
   gem "web-console", "~> 2.0"
