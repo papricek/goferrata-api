@@ -3,6 +3,7 @@ source "https://rubygems.org"
 gem "rails", "4.2.1"
 gem "sqlite3"
 gem "jbuilder", "~> 2.0"
+gem "rack-cors"
 
 group :development, :test do
   gem "web-console", "~> 2.0"
