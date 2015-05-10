@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  mount RailsAdmin::Engine => "/", constraints: { subdomain: "admin" }
+  constraints subdomain: "admin" do
+    mount RailsAdmin::Engine => "/"
+  end
 
   constraints subdomain: "api" do
     resources :points
