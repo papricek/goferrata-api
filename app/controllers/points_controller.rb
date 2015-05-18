@@ -2,7 +2,7 @@ class PointsController < ApplicationController
 
   def index
     @points = Point.all
-    render json: @points if stale?(@points.order("updated_at desc").first.updated_at)
+    fresh_when Point.order("updated_at asc").last.updated_at
   end
 
 end
