@@ -15,4 +15,10 @@ FactoryGirl.define do
     difficulty "F"
   end
 
+  factory :user do
+    first_name "John"
+    last_name "Zorn"
+    email "john@zorn.com"
+  end
+
 end
