@@ -8,7 +8,6 @@ Rails.application.routes.draw do
     resources :points
     resources :users do
       post :login, on: :collection
-      get :login, on: :collection
     end
   end
 
