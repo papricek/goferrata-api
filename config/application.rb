@@ -25,7 +25,7 @@ module GoferrataApi
 
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
-        origins 'goferrata.dev', 'goferrata.com'
+        origins 'goferrata.dev', 'goferrata.com', 'www.goferrata.com'
         resource '*', headers: :any, methods: [:get]
       end
     end
