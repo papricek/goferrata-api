@@ -30,7 +30,10 @@ class User < ActiveRecord::Base
   private
 
   def set_token
-    self.token = SecureRandom.uuid.gsub(/\-/,'')
+    self.token = loop do
+      random_token = SecureRandom.urlsafe_base64(nil, false)
+      break random_token unless User.exists?(token: random_token)
+    end
   end
 
 end
