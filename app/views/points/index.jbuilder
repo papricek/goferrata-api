@@ -15,5 +15,5 @@ json.points @points do |point|
   json.slug           point.slug
   json.difficulty     point.difficulty
 
-  json.comments point.comments, :id, :text, :created_at
+  json.comments point.comments, :id, :text, :created_at, :user_name
 end
