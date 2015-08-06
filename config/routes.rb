@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   end
 
   constraints subdomain: "api" do
-    resources :points
+    resources :points do
+      resources :comments
+    end
     resources :users do
       post :login, on: :collection
     end

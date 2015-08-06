@@ -14,4 +14,6 @@ json.points @points do |point|
   json.height         point.height
   json.slug           point.slug
   json.difficulty     point.difficulty
+
+  json.comments point.comments, :id, :text, :created_at
 end

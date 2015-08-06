@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
 
+  # Associations
+  has_many :comments
+
   # Callbacks
   before_validation :set_token, on: :create
 

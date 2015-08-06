@@ -26,13 +26,4 @@ class UsersController < ApplicationController
               end
   end
 
-  def formatted_errors(user)
-    user.errors.messages.map do |column, errors|
-      {
-        title: "#{column.to_s.humanize} #{errors.join(", ")}",
-        status: 400
-      }
-    end
-  end
-
 end
