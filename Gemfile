@@ -5,6 +5,7 @@ gem "sqlite3"
 gem "jbuilder", "~> 2.0"
 gem "rack-cors"
 gem "rails_admin"
+gem "koala"
 
 group :production do
   gem "therubyracer"
@@ -25,4 +26,5 @@ group :test do
   gem "minitest-reporters"
   gem "shoulda"
   gem "factory_girl_rails"
+  gem "mocha", require: "mocha/setup"
 end

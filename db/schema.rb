@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150507184428) do
+ActiveRecord::Schema.define(version: 20150803183557) do
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "text"
+    t.integer  "user_id"
+    t.integer  "point_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "points", force: :cascade do |t|
     t.string   "link"
@@ -28,6 +36,18 @@ ActiveRecord::Schema.define(version: 20150507184428) do
     t.integer  "height"
     t.string   "slug"
     t.string   "difficulty"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "email"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.text     "info"
+    t.string   "access_token"
+    t.datetime "access_token_updated_at"
+    t.string   "token"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
